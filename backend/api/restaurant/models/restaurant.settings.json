@@ -1,0 +1,45 @@
+{
+  "kind": "collectionType",
+  "collectionName": "restaurents",
+  "info": {
+    "name": "Restaurent",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "restaurentName": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "priceRange": {
+      "type": "string"
+    },
+    "email": {
+      "type": "string"
+    },
+    "address": {
+      "type": "text",
+      "required": true
+    },
+    "since": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "create_at": {
+      "type": "string"
+    },
+    "update_at": {
+      "type": "string"
+    },
+    "restaurant_hours": {
+      "type": "json"
+    }
+  }
+}
