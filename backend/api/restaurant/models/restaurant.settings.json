@@ -1,8 +1,8 @@
 {
   "kind": "collectionType",
-  "collectionName": "restaurents",
+  "collectionName": "restaurants",
   "info": {
-    "name": "Restaurent",
+    "name": "Restaurant",
     "description": ""
   },
   "options": {
@@ -11,7 +11,7 @@
     "draftAndPublish": true
   },
   "attributes": {
-    "restaurentName": {
+    "restaurantName": {
       "type": "string",
       "required": true,
       "unique": true
@@ -28,9 +28,6 @@
     },
     "since": {
       "type": "string"
-    },
-    "description": {
-      "type": "text"
     },
     "create_at": {
       "type": "string"

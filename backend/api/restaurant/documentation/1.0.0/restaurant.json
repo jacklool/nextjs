@@ -517,14 +517,14 @@
       "Restaurant": {
         "required": [
           "id",
-          "restaurentName",
+          "restaurantName",
           "address"
         ],
         "properties": {
           "id": {
             "type": "string"
           },
-          "restaurentName": {
+          "restaurantName": {
             "type": "string"
           },
           "priceRange": {
@@ -537,9 +537,6 @@
             "type": "string"
           },
           "since": {
-            "type": "string"
-          },
-          "description": {
             "type": "string"
           },
           "create_at": {
@@ -559,11 +556,11 @@
       },
       "NewRestaurant": {
         "required": [
-          "restaurentName",
+          "restaurantName",
           "address"
         ],
         "properties": {
-          "restaurentName": {
+          "restaurantName": {
             "type": "string"
           },
           "priceRange": {
@@ -576,9 +573,6 @@
             "type": "string"
           },
           "since": {
-            "type": "string"
-          },
-          "description": {
             "type": "string"
           },
           "create_at": {

@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "03/03/2021 2:01:42 PM"
+    "x-generation-date": "03/04/2021 1:18:00 AM"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -3171,14 +3171,14 @@
       "Restaurant": {
         "required": [
           "id",
-          "restaurentName",
+          "restaurantName",
           "address"
         ],
         "properties": {
           "id": {
             "type": "string"
           },
-          "restaurentName": {
+          "restaurantName": {
             "type": "string"
           },
           "priceRange": {
@@ -3191,9 +3191,6 @@
             "type": "string"
           },
           "since": {
-            "type": "string"
-          },
-          "description": {
             "type": "string"
           },
           "create_at": {
@@ -3213,11 +3210,11 @@
       },
       "NewRestaurant": {
         "required": [
-          "restaurentName",
+          "restaurantName",
           "address"
         ],
         "properties": {
-          "restaurentName": {
+          "restaurantName": {
             "type": "string"
           },
           "priceRange": {
@@ -3230,9 +3227,6 @@
             "type": "string"
           },
           "since": {
-            "type": "string"
-          },
-          "description": {
             "type": "string"
           },
           "create_at": {
@@ -3319,14 +3313,14 @@
           "restaurant": {
             "required": [
               "id",
-              "restaurentName",
+              "restaurantName",
               "address"
             ],
             "properties": {
               "id": {
                 "type": "string"
               },
-              "restaurentName": {
+              "restaurantName": {
                 "type": "string"
               },
               "priceRange": {
@@ -3339,9 +3333,6 @@
                 "type": "string"
               },
               "since": {
-                "type": "string"
-              },
-              "description": {
                 "type": "string"
               },
               "create_at": {

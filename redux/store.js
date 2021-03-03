@@ -4,61 +4,31 @@ import { createStore, applyMiddleware } from 'redux'
 import { composeWithDevTools } from 'redux-devtools-extension'
 
 let store
-const access_token = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjE0Njc5MDU3LCJleHAiOjE2MTcyNzEwNTd9.hU0WiM9rkIn5PB8Fx08-J3VpjrEDsQ3jhMScDshYeZ8';
 
 const initialState = {
-  restaurents: []
+    restaurants: []
 }
 
 const reducer = (state = initialState, action) => {
-  switch (action.type) {
-    case 'GET_RESTAURENT_LIST':
-      axios.get('http://localhost:1337/restaurants', {
-            headers: {
-              Authorization: `Bearer ${access_token}`
+    switch (action.type) {
+        case 'GET_RESTAURANTS':
+            return {
+                ...state,
+                restaurants: action.payload
             }
-          })
-          .then((res) => {
-              console.log("redux GET_RESTAURENT_LIST")
-              console.log(res.data);
-              return state
-          })
-          .catch(err => {
-            console.log('Error: ' + err);
-            return state
-          });
-          break;
-    case 'ADD_RESTAURENT':
-      console.log('ADD_RESTAURENT');
-      axios.post('http://localhost:1337/restaurants', action.playload,{
-        headers: {
-              Authorization: `Bearer ${access_token}`
+        case 'ADD_RESTAURANT':
+            return {
+                ...state,
+                restaurants: [action.payload, ...state.restaurants]
             }
-          })
-          .then((res) => {
-              return {
-                  ...state,
-                  restaurents: [res.data, ...state.restaurents]
-              }
-          })
-          .catch(err => {
-            console.log('Error: ' + err);
+        case 'DEL_RESTAURANT':
+            return {
+                ...state,
+                restaurants: state.restaurants.filter(item => item.id !== action.payload)
+            }
+        default:
             return state
-          });
-          break;
-    case 'DECREMENT':
-      return {
-        ...state,
-      }
-    case 'RESET':
-      return {
-        ...state,
-        count: initialState.count,
-      }
-      break;
-    default:
-      return state
-  }
+    }
 }
 
 function initStore(preloadedState = initialState) {
